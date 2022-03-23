@@ -1,0 +1,176 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#container{
+    max-height:100vh;
+    width:100%;
+    position:relative;
+}
+
+header,footer{
+    height:auto;
+    padding: 5rem 0;
+    text-align: center;
+    background-color:rgba(0,0,0,0.75);
+    box-shadow:0 0 2px #fff;
+}
+
+header{
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+footer{
+    width:100%;
+    position:fixed;
+    left:0;
+    bottom:0;
+}
+
+footer h4{
+    color:red;
+    font-size: 18px;
+}
+
+header h1{
+    color:rgba(255,255,255,0.75);
+    font-size:2rem;
+}
+
+main{
+    position:fixed;
+    top:25%;
+    left:0;
+
+    width:100%;
+
+    padding:3rem 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+
+main form{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap:5rem;
+}
+
+main form .input-group{
+    padding: 0.1rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 0 2px rgba(0,0,0,0.75);
+
+}
+
+main form .form-control{
+    padding: 0.2rem 0.3rem;
+
+    color:rgba(0,0,0,0.75);
+    font-size: 19px;
+
+    background-color:none;
+    border-radius: 0.2rem;
+    border:none;
+    border-bottom:0.5px solid rgba(0,0,0,0.75);
+    box-shadow: 0 0 1.5px red;
+    transition:0.5s all;
+}
+
+main form .form-control:focus{
+    outline:none;
+    box-shadow: 0 0 5px red;
+}
+
+.btn{
+    border:none;
+    border-radius: 3px;
+
+    padding:0.5rem 1rem;
+
+    background-color: rgba(0,0,0,0.75);
+    box-shadow: 0 0 2px rgba(0,0,0,0.75);
+    font-size: 18px;
+    color:rgba(255,255,255,0.75);
+    transition: 0.5s all;
+}
+
+.clear{
+    margin:3rem auto;
+    margin-bottom: 0;
+    width:50%;
+    padding:0.3rem;
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 3px;
+    transition: 0.8s all;
+}
+
+.clear:hover{
+    box-shadow:0 0 2px rgba(0,0,0,0.75);
+}
+
+.output-area{
+    width:50%;
+    margin:0 auto;
+
+    background:rgba(0,0,0,0.3);
+    border-radius: 3px;
+    box-shadow: 0 0 0.5px rgba(0,0,0,0.75);
+    padding:0.5rem;
+    height:200px;
+    overflow-y: scroll;
+}
+
+.output-area p{
+    line-height: 1.5;
+    color:red;
+    font-weight:bold;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width:1000px){
+    .clear,.output-area{
+        width:60%;
+    }
+}
+
+@media (max-width:600px){
+    #container{
+        height:auto;
+    }
+
+    main{
+        padding:0.3rem 0;
+    }
+
+    main form{
+        flex-direction:column;
+        gap:1rem;
+        justify-content: center;
+        width:100%;
+        height:auto;
+    }
+
+    main form .form-control{
+        padding:0 3rem;
+    }
+
+    .clear{
+        margin-top:0.3rem;
+    }
+
+    .clear,.output-area{
+        width:95%;
+    }
+}
